@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.1s;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+@layer base {
+  body {
+    @apply bg-light-mode text-white font-poppins; /* Default light mode styles */
+  }
+
+  .dark body {
+    @apply bg-dark-mode text-black font-poppins; /* Dark mode styles */
+  }
+}
+
+
+
+
+/* Mobile Dropdown Animation */
+@keyframes slideDown {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 100vh; 
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    height: 100vh;
+    opacity: 1;
+  }
+  100% {
+    height: 0; 
+    opacity: 0;
+  }
+}
+
+.navbar-collapse {
+  overflow: hidden;
+  height: 0;
+  transition: height 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Apply the slideDown animation when .opened class is present */
+.navbar-collapse.opened {
+  animation: slideDown 1s ease-in-out forwards;
+}
+
+/* Apply the slideUp animation when .closed class is present */
+.navbar-collapse.closed {
+  animation: slideUp 1s ease-in-out forwards;
+}
