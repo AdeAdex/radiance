@@ -42,8 +42,8 @@ const ServicesCard: React.FC<ServicesCardProp> = ({ data }) => {
           src={icon}
           alt={title}
           className="rounded-full"
-          layout="fill"
-          objectFit="contain"
+          fill
+          style={{ objectFit: "cover" }}
           priority
         />
       </div>
