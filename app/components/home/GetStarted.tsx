@@ -1,24 +1,23 @@
-'use client'
+"use client";
 
-
-import { useInView } from 'react-intersection-observer';
-import { useSpring, animated } from '@react-spring/web';
-import Image from 'next/image';
-import Link from 'next/link';
-import { storeLinks } from '@/app/data/storeLinks';
-import pngwing from '@/public/images/pngwing.png';
+import { useInView } from "react-intersection-observer";
+import { useSpring, animated } from "@react-spring/web";
+import Image from "next/image";
+import Link from "next/link";
+import { storeLinks } from "@/app/data/storeLinks";
+import pngwing from "@/public/images/pngwing.png";
 
 const GetStarted = () => {
   // Use Intersection Observer to trigger animation when element is in view
   const { ref, inView } = useInView({
     triggerOnce: false, // Trigger animation only once
-    threshold: 0.5,    // Trigger when 10% of the element is visible
+    threshold: 0.5, // Trigger when 10% of the element is visible
   });
 
   // Define spring animation using React Spring
   const animation = useSpring({
     opacity: inView ? 1 : 0, // Fade in/out
-    transform: inView ? 'translateY(0)' : 'translateY(30px)', // Move up on scroll
+    transform: inView ? "translateY(0)" : "translateY(30px)", // Move up on scroll
     config: { tension: 200, friction: 15 }, // Physics-based animation config
   });
 
@@ -69,7 +68,8 @@ const GetStarted = () => {
                   src={store.src}
                   alt={store.alt}
                   fill
-                  className="md:object-contain"
+                  className="object-contain"
+                  sizes="(max-width: 640px) 80px, (max-width: 1024px) 128px, 192px"
                 />
               </Link>
             ))}

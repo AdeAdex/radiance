@@ -1,6 +1,4 @@
-'use client'
-
-
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -21,7 +19,7 @@ const ServicesCard: React.FC<ServicesCardProp> = ({ data }) => {
   // Use Intersection Observer to detect when the card is in view
   const { ref, inView } = useInView({
     triggerOnce: false, // Animation triggers only once
-    threshold: 0.2,    // Triggers when 20% of the card is visible
+    threshold: 0.2, // Triggers when 20% of the card is visible
   });
 
   // Define animation using React Spring
@@ -45,6 +43,7 @@ const ServicesCard: React.FC<ServicesCardProp> = ({ data }) => {
           fill
           style={{ objectFit: "cover" }}
           priority
+          sizes="(max-width: 768px) 64px, 80px"
         />
       </div>
       <h2 className="font-[400] text-[16px] xs:text-[14px] xl:text-[24px] mb-2 lg:leading-[32px] hover:text-blue-500 transition-colors duration-300">

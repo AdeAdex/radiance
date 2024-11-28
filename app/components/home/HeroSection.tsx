@@ -1,6 +1,5 @@
 //   'use client'
 
-
 // import Image from "next/image";
 // import React from "react";
 // import { useInView } from "react-intersection-observer";
@@ -108,9 +107,7 @@
 
 // export default HeroSection;
 
-
-
-'use client';
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -120,6 +117,7 @@ import users from "@/public/images/user.png";
 import phone from "@/public/images/holding-phone.png";
 import { storeLinks } from "@/app/data/storeLinks";
 import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   // Observer for left content
@@ -157,9 +155,43 @@ const HeroSection = () => {
         className="w-full md:w-1/2 flex flex-col justify-center space-y-4"
       >
         <div className="text-[24px] sm:text-[28px] lg:text-[36px] xl:text-[45px] leading-[32px] sm:leading-[36px] xl:leading-[48px] font-medium flex flex-col">
-          <span className="">Discover a World of</span>{" "}
+          {/* <span className="">Discover a World of</span>{" "}
           <span className="text-radiance-red"> Sermon with Radiance</span>
-          <span className="text-radiance-red"> App</span>
+          <span className="text-radiance-red"> App</span> */}
+          <TypeAnimation
+            sequence={[
+              "Discover a World of", // Text
+              2000, // Pause for 2 seconds
+            ]}
+            wrapper="span"
+            speed={50}
+            className=""
+            cursor={false}
+          />
+          <TypeAnimation
+            sequence={[
+              "", // Empty to delay start
+              2000, // Wait 2 seconds
+              "Sermon with Radiance", // Text
+              2000, // Pause for 2 seconds
+            ]}
+            wrapper="span"
+            speed={50}
+            className="text-radiance-red"
+            cursor={false}
+          />
+          <TypeAnimation
+            sequence={[
+              "", // Empty to delay start
+              3000, // Wait 4 seconds
+              "App", // Text
+              2000, // Pause for 2 seconds
+            ]}
+            wrapper="span"
+            speed={50}
+            className="text-radiance-red"
+            cursor={false}
+          />
         </div>
         <div className="text-[14px] sm:text-[16px] font-medium leading-[24px] text-radiance-gray w-full max-w-full md:max-w-[563px]">
           Welcome to Radiance App, where spirituality meets modern convenience.
@@ -178,6 +210,7 @@ const HeroSection = () => {
                 alt={store.alt}
                 fill
                 className="object-contain"
+                sizes="(max-width: 640px) 80px, (max-width: 1024px) 128px, 192px"
               />
             </Link>
           ))}
@@ -211,6 +244,7 @@ const HeroSection = () => {
           priority
           quality={100}
           className="object-contain max-w-full h-auto"
+          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
         />
       </animated.div>
     </div>

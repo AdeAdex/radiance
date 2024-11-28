@@ -22,6 +22,7 @@ const Stats = () => {
               priority
               quality={100}
               className="object-contain"
+              sizes="(max-width: 768px) 64px, (max-width: 1200px) 112px, 128px"
             />
           </div>
         ))}
