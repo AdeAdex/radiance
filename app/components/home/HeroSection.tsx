@@ -95,7 +95,7 @@ const HeroSection = () => {
             <Link
               href={store.link}
               key={index}
-              className="relative w-20 h-8 sm:w-24 sm:h-10 lg:w-32 lg:h-16 hover:scale-105 transform transition-all duration-300"
+              className="relative w-24 h-9 sm:w-24 sm:h-10 lg:w-32 lg:h-16 hover:scale-105 transform transition-all duration-300"
             >
               <Image
                 src={store.src}
