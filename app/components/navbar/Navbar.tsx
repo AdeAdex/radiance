@@ -16,18 +16,20 @@ const Navbar = () => {
   return (
     <div className="flex justify-between px-[20px] lg:px-[60px] bg-radiance-color py-2 border-b items-center">
       <div className="flex items-center">
-        <Image
-          src={radianceLogo}
-          alt="Radiance Logo"
-          priority
-          quality={100}
-          width={200} // Defined width
-          height={50} // Defined height
-          style={{ height: "auto" }} // Ensures aspect ratio is maintained
-          className="object-contain"
-        />
-         {/* Image component with fixed aspect ratio */}
-         {/* <Image
+        <Link href="/">
+          <Image
+            src={radianceLogo}
+            alt="Radiance Logo"
+            priority
+            quality={100}
+            width={200} // Defined width
+            height={50} // Defined height
+            style={{ height: "auto" }} // Ensures aspect ratio is maintained
+            className="object-contain"
+          />
+        </Link>
+        {/* Image component with fixed aspect ratio */}
+        {/* <Image
           src={radianceLogo}
           alt="Radiance Logo"
           priority
