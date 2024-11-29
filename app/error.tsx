@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -12,7 +12,7 @@ const ErrorPage = () => {
           Oops! Something went wrong.
         </h2>
         <p className="mt-2 text-gray-600 text-sm md:text-base">
-          We're working to fix this issue. Please try again later.
+          We&apos;re working to fix this issue. Please try again later.
         </p>
         <Link
           href="/"
@@ -26,4 +26,3 @@ const ErrorPage = () => {
 };
 
 export default ErrorPage;
-

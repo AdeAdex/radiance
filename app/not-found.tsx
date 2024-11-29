@@ -10,7 +10,7 @@ const NotFoundPage = () => {
           Page Not Found
         </h2>
         <p className="mt-2 text-gray-600 text-sm md:text-base">
-          Sorry, the page you're looking for doesn't exist or has been moved.
+          Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <Link
           href="/"
@@ -24,4 +24,3 @@ const NotFoundPage = () => {
 };
 
 export default NotFoundPage;
-
